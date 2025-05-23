@@ -39,7 +39,7 @@ img = Image.open('heart_img.jpg')
 st.image(img, caption="Heart Health", use_container_width=False, width=200)
 
 # User input
-st.header("🔢 Enter Patient Features")
+st.header("Enter Patient Features")
 input_text = st.text_input('Enter comma-separated values (13 features):')
 
 if input_text:
@@ -60,10 +60,10 @@ if input_text:
         st.error("❌ Please enter only numeric comma-separated values.")
 
 # Display Data and Metrics
-st.subheader("📊 Dataset Preview")
+st.subheader("Dataset Preview")
 st.dataframe(heart_data.head())
 
-st.subheader("✅ Model Evaluation")
+st.subheader("Model Evaluation")
 st.write(f"**Training Accuracy:** {training_data_accuracy:.2f}")
 st.write(f"**Test Accuracy:** {test_data_accuracy:.2f}")
 
